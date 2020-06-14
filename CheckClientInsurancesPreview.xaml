@@ -1,0 +1,19 @@
+﻿<Window x:Class="CarInsurance.CheckClientInsurancesPreview"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarInsurance"
+        mc:Ignorable="d"
+        Title="CheckClientInsurancesPreview" Height="Auto" Width="800">
+    <Grid>
+        <Grid x:Name="Print">
+            <DataGrid x:Name="DataGrid" AutoGenerateColumns="False" HorizontalAlignment="Center" Width="Auto" Height="Auto" Margin="10,100,0,0" VerticalAlignment="Top" HeadersVisibility="Column"/>
+            <Label Content="Клиент" HorizontalAlignment="Left" Margin="60,40,0,0" VerticalAlignment="Top" Foreground="#FFC51E1E" FontWeight="Bold" FontSize="14" Height="28.8"/>
+            <Label x:Name="ClientNameLbl" Content="Label" HorizontalAlignment="Left" Margin="124,43,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Button x:Name="PrintBtn" HorizontalAlignment="Left" Margin="600,30,0,0" VerticalAlignment="Top" Width="auto" Height="auto" Click="PrintBtn_Click" Background="Transparent">
+            <Image Source="/ImageResoures/Print_Button.png" Height="31" Width="51" Stretch="Uniform"/>
+        </Button>
+    </Grid>
+</Window>

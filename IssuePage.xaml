@@ -1,0 +1,68 @@
+﻿<Page x:Class="CarInsurance.IssuePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CarInsurance"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="IssuePage">
+
+    <Grid>
+        <Label x:Name="VehTypeLbl" Content="Вид МПС" HorizontalAlignment="Left" Margin="60,60,0,0" VerticalAlignment="Top" Width="152" FontWeight="Bold" Foreground="White"/>
+        <Label x:Name="PriceLbl" Content="Застрахователна сума" HorizontalAlignment="Left" Margin="60,180,0,0" VerticalAlignment="Top" Width="152" FontWeight="Bold" Foreground="White"/>
+        <Label x:Name="AgeLbl" Content="Възраст на МПС:" HorizontalAlignment="Left" Margin="360,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.769,0.055" FontWeight="Bold" Foreground="White"/>
+        <Label x:Name="OtherInsurance" Content="Има ли сключена друга застраховка?" HorizontalAlignment="Left" Margin="360,180,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
+        <Button x:Name="CalculationBtn" Content="Издаване" HorizontalAlignment="Left" Margin="64,330,0,0" VerticalAlignment="Top" Width="75" Click="CalculationBtn_Click" Height="25" Style="{DynamicResource RoundedButton}" Background="#FFDCD4D4"/>
+        <TextBox x:Name="PriceTxt" HorizontalAlignment="Left" Height="25.6" Margin="220,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFDCD4D4"/>
+        <TextBox x:Name="AgeTxt" HorizontalAlignment="Left" Height="25.6" Margin="590,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFDCD4D4"/>
+        <RadioButton x:Name="YesBtn" Content="Да" HorizontalAlignment="Left" Margin="364,210,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" Background="#FFDDDDDD"/>
+        <RadioButton x:Name="NoBtn" Content="Не" HorizontalAlignment="Left" Margin="420,210,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" Background="#FFDDDDDD"/>
+        <ComboBox x:Name="VehTypeCombo" HorizontalAlignment="Left" Margin="220,60,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" Height="25.6">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFDCD4D4" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Content="Мотор" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Лек автомобил" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Автобус" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Камион" HorizontalAlignment="Left" Width="118.4"/>
+        </ComboBox>
+        <Label x:Name="OwnerNameLbl" Content="Име на собственика" HorizontalAlignment="Left" Margin="60,210,0,0" VerticalAlignment="Top" Width="152" FontWeight="Bold" Foreground="White"/>
+        <Label x:Name="EgnLbl" Content="ЕГН" HorizontalAlignment="Left" Margin="60,240,0,0" VerticalAlignment="Top" Width="152" FontWeight="Bold" Foreground="White"/>
+        <Label x:Name="VinLbl" Content="ВИН" HorizontalAlignment="Left" Margin="60,150,0,0" VerticalAlignment="Top" Width="152" FontWeight="Bold" Foreground="White"/>
+        <TextBox x:Name="VinTxt" HorizontalAlignment="Left" Height="25.6" Margin="220,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFDCD4D4"/>
+        <Label x:Name="CoupeTypeLbl" Content="Тип купе" HorizontalAlignment="Left" Margin="360,60,0,0" VerticalAlignment="Top" IsEnabled="False" FontWeight="Bold" Foreground="White"/>
+        <ComboBox x:Name="CoupeTypeCombo" HorizontalAlignment="Left" Margin="590,60,0,0" VerticalAlignment="Top" Width="120" IsEnabled="False" Height="25.6" >
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFDCD4D4" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Content="Седан" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Купе" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Кабриолет" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Комби" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Хечбек" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Миниван" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="Ван" HorizontalAlignment="Left" Width="118.4"/>
+        </ComboBox>
+        <TextBox x:Name="OwnerNameTxt" HorizontalAlignment="Left" Height="25.6" Margin="220,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFDCD4D4"/>
+        <TextBox x:Name="EgnTxt" HorizontalAlignment="Left" Height="25.6" Margin="220,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFDCD4D4"/>
+        <Label x:Name="BrandLbl" Content="Марка" HorizontalAlignment="Left" Margin="60,90,0,0" VerticalAlignment="Top" Width="152" FontWeight="Bold" Foreground="White"/>
+        <TextBox x:Name="BrandTxt" HorizontalAlignment="Left" Height="25.6" Margin="220,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFDCD4D4"/>
+        <Label x:Name="ModelLbl" Content="Модел" HorizontalAlignment="Left" Margin="360,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.552,0.625" FontWeight="Bold" Foreground="White"/>
+        <TextBox x:Name="ModelTxt" HorizontalAlignment="Left" Height="25.6" Margin="590,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFDCD4D4"/>
+        <Label x:Name="ColorLbl" Content="Цвят" HorizontalAlignment="Left" Margin="360,120,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
+        <TextBox x:Name="ColorTxt" HorizontalAlignment="Left" Height="25.6" Margin="590,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFDCD4D4"/>
+        <Label Content="Мощност" HorizontalAlignment="Left" Margin="60,120,0,0" VerticalAlignment="Top" Width="152" FontWeight="Bold" Foreground="White"/>
+        <TextBox x:Name="PowerTxt" HorizontalAlignment="Left" Height="25.6" Margin="220,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFDCD4D4"/>
+        <Label Content="Опит на водача(години)" HorizontalAlignment="Left" Margin="60,270,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
+        <TextBox x:Name="ExpTxt" HorizontalAlignment="Left" Height="25.6" Margin="220,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFDCD4D4"/>
+        <Label Content="Издаване на Каско" HorizontalAlignment="Left" Margin="60,10,0,0" VerticalAlignment="Top" FontSize="18" Foreground="#FFC51E1E" FontWeight="Bold"/>
+
+    </Grid>
+</Page>

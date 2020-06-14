@@ -1,0 +1,31 @@
+﻿<Page x:Class="CarInsurance.RefPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CarInsurance"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RefPage">
+
+    <Grid>
+        <Label Content="Средна стойност на застрахованите МПС" HorizontalAlignment="Left" Margin="60,60,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Средна възраст на застрахованите МПС" HorizontalAlignment="Left" Margin="60,90,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="AvgPriceLbl" Content="Label" HorizontalAlignment="Left" Margin="315,60,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="AvgAgeLbl" Content="Label" HorizontalAlignment="Left" Margin="315,90,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Други справки" HorizontalAlignment="Left" Margin="60,150,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="#FFC51E1E"/>
+        <Label Content="Клиенти на застрахователната фирма" HorizontalAlignment="Left" Margin="60,180,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Брой застраховки на клиент" HorizontalAlignment="Left" Margin="60,210,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+        <RadioButton x:Name="CheckAllClients" Content="" HorizontalAlignment="Left" Margin="320,188,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked_1" Background="#FFDDDDDD" />
+        <RadioButton x:Name="CheckClientInsurances" Content="" HorizontalAlignment="Left" Margin="320,215,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Background="#FFDDDDDD"/>
+        <Label x:Name="EgnLbl" Content="Въведете ЕГН на клиент" HorizontalAlignment="Left" Margin="350,210,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" Visibility="Hidden"/>
+        <TextBox x:Name="EgnTxt" HorizontalAlignment="Left" Height="26" Margin="500,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Background="#FFDCD4D4" Visibility="Hidden"/>
+        <Button x:Name="Check" Content="Направи справка" HorizontalAlignment="Left" Margin="60,330,0,0" VerticalAlignment="Top" Width="105" Height="25.6" Click="Check_Click" Style="{DynamicResource RoundedButton}" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Справки" HorizontalAlignment="Left" Margin="60,10,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="#FFC51E1E"/>
+        <Label Content="Проверка на валидни застраховки по VIN" HorizontalAlignment="Left" Margin="60,240,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+        <RadioButton x:Name="CheckInsurancesByVIN" Content="" HorizontalAlignment="Left" Margin="320,246,0,0" VerticalAlignment="Top" Background="#FFDDDDDD" Checked="CheckInsurancesByVIN_Checked"/>
+        <TextBox x:Name="VinTxt" HorizontalAlignment="Left" Height="26" Margin="527,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden" Background="#FFDCD4D4"/>
+        <Label x:Name="VinLbl" Content="Въведете VIN" HorizontalAlignment="Left" Margin="350,240,0,0" VerticalAlignment="Top" Width="150.4" Foreground="White" FontWeight="Bold" Visibility="Hidden"/>
+
+    </Grid>
+</Page>
